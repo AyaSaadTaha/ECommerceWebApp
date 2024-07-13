@@ -25,7 +25,11 @@ namespace ECommerceWebApp.Controllers
             IEnumerable<Customer> CustomerList = _context.Customer;
             return View(CustomerList);
         }
-
+        public IActionResult Index2()
+        {
+            IEnumerable<Customer> CustomerList = _context.Customer;
+            return View(CustomerList);
+        }
 
         // GET: Customers/Create
         public IActionResult Create()
