@@ -1,0 +1,78 @@
+﻿@model ECommerceWebApp.Models.Order
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container pt-3">
+    <div class="row pt-4">
+        <div class="col-6">
+            <h2 class="text-primary">Create Order</h2>
+        </div>
+    </div>
+    <br />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <input asp-for="CreateDateTime" class="form-control" hidden />
+                <input asp-for="Id" class="form-control" hidden />
+                <div class="form-group">
+                    <label asp-for="ProductId" class="control-label"></label>
+                    <select asp-for="ProductId" class="form-control" asp-items="ViewBag.ProductId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="CustomerId" class="control-label"></label>
+                <select asp-for="CustomerId" class ="form-control" asp-items="ViewBag.CustomerId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="Price" class="control-label"></label>
+                <input asp-for="Price" class="form-control" />
+                <span asp-validation-for="Price" class="text-danger"></span>
+            </div>
+        
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+
+    <script>
+        var ProductId = $("#ProductId").val();
+        $.ajax({
+            type: 'GET',
+            url: '../../Orders/GetProductPrice?id=' + ProductId,
+            dataType: 'json',
+            success: function (data) {
+                console.log(data);
+                $("#Price").val(data);
+            },
+            async: true // make it true if you want to make an async call.
+        });
+
+        $('#ProductId').on("change", function () {
+            var ProductId = $('#ProductId').val();
+            $.ajax({
+                type: 'GET',
+                url: '../../Orders/GetProductPrice?id=' + ProductId,
+                dataType: 'json',
+                success: function (data) {
+                    console.log(data);
+                    $("#Price").val(data);
+                },
+                async: true // make it true if you want to make an async call.
+            });
+          });
+    </script>
+}
+

@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34202.233
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ECommerceWebApp", "ECommerceWebApp\ECommerceWebApp.csproj", "{16EDAA46-0AFD-4822-90BC-22C13C2DFA1D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ECommerceWebAppTestProject", "ECommerceWebAppTestProject\ECommerceWebAppTestProject.csproj", "{36C5384F-BE3D-4C46-8AE2-55D1B0524AE6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{16EDAA46-0AFD-4822-90BC-22C13C2DFA1D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{16EDAA46-0AFD-4822-90BC-22C13C2DFA1D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{16EDAA46-0AFD-4822-90BC-22C13C2DFA1D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{16EDAA46-0AFD-4822-90BC-22C13C2DFA1D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{36C5384F-BE3D-4C46-8AE2-55D1B0524AE6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{36C5384F-BE3D-4C46-8AE2-55D1B0524AE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{36C5384F-BE3D-4C46-8AE2-55D1B0524AE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{36C5384F-BE3D-4C46-8AE2-55D1B0524AE6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E29D53F3-FCA7-400C-927A-215798E3C2F1}
+	EndGlobalSection
+EndGlobal
